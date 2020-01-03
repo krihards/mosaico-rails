@@ -2,6 +2,8 @@ require 'mini_magick'
 
 module Mosaico
   class ImagesController < ::Mosaico::ApplicationController
+    skip_before_action :authenticate_user!, only: :show
+
     def create
       files = params[:files].map do |file|
         dest_file = File.basename(file.tempfile.path)
