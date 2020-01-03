@@ -2,6 +2,7 @@ module Mosaico
   class ApplicationController < ActionController::Base
     helper ::Mosaico::ApplicationHelper
     before_action :set_locale
+    before_action :authenticate_user!
 
     private
 
