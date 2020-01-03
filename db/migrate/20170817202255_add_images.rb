@@ -1,4 +1,4 @@
-class AddImages < ActiveRecord::Migration[4.2]
+class AddImages < ActiveRecord::Migration
   def change
     create_table :mosaico_images do |t|
       t.string  :file,      null: false

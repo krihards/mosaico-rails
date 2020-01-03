@@ -1,4 +1,4 @@
-class AddProjects < ActiveRecord::Migration[4.2]
+class AddProjects < ActiveRecord::Migration
   def change
     create_table :mosaico_projects do |t|
       t.text :html
